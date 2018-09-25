@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+$white: #fff;
+$black: #000;
+$about-bg: rgba(#e7e7e7, 0.6);
+$darkblue: darkblue;
+$logo-grey: #bdbdbd;
+$logo-C: #ff4081;
+$logo-OS: #2196f3;
+
+%spanProps {
+  display: block;
+  font-size: 7rem;
+}
+
+%commonPadding {
+  padding: 1rem 3rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.S {
+  color: $logo-OS;
+}
+
+.O {
+  color: $logo-OS;
+}
+
+.C {
+  color: $logo-C;
+}
+
+.nav {
+  background-color: $black;
+  color: white;
+  padding: 2.5rem 6rem;
+  display: flex;
+  &__logo {
+    font-family: 'Product Sans', Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    color: $logo-grey;
+    margin-right: auto;
+    font-weight: 500;
+    &--open {
+      display: block;
+    }
+    &::first-letter {
+      color: $logo-OS;
+    }
+    &--community {
+      display: block;
+    }
+    &--community::first-letter {
+      color: $logo-C;
+    }
+  }
+  &__navbar {
+    flex: 0 0 35%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &--items {
+      list-style-type: none;
+    }
+    &--link,
+    &--link:visited {
+      text-decoration: none;
+      color: white;
+      transition: all 0.15s ease-in;
+      &:hover {
+        color: $darkblue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.container {
+  flex: 1;
+  padding: 0 4.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.header {
+  margin-top: 2rem;
+  display: flex;
+  height: 85vh;
+  padding: 3rem 3.5rem;
+  font-family: 'Cabin', Arial, Helvetica, sans-serif;
+  color: $white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  &__about {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+
+    &--One {
+      @extend %spanProps;
+    }
+    &--Two {
+      @extend %spanProps;
+      margin-left: 5px;
+    }
+  }
+  &__box {
+    height: 85%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: rgba($black, 0.2);
+    border-radius: 3px;
+    font-size: 4.5rem;
+    &--text {
+      margin-top: 5rem;
+      font-size: 1.8rem;
+    }
+    &--button {
+      padding: 2rem;
+      width: 15rem;
+      margin-top: 4rem;
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $logo-OS;
+      border-radius: 3.5px;
+      & a {
+        text-decoration: none;
+        color: $white;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: darken($logo-OS, 10);
+      }
+    }
+  }
+}
+
+.about {
+  margin: 2rem 0 3rem 0;
+  @extend %commonPadding;
+  color: $black;
+  &__container {
+    display: flex;
+    &--image {
+      flex: 0 0 45%;
+    }
+    &--image img {
+      width: 100%;
+    }
+    &--text {
+      padding: 1rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      &__heading {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.events {
+  @extend %commonPadding;
+  &__current img {
+    width: 100%;
+  }
+}
+
+.team {
+  @extend %commonPadding;
+  width: 100%;
+  margin-top: 1.5rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--image {
+      flex: 0 0 40%;
+      padding-left: 10rem;
+    }
+    &--image img {
+      width: 30rem;
+    }
+    &--text {
+      flex: 1;
+    }
+  }
+}
+
+/* CARDS */
+.cards__container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: $white;
+  &--card {
+    background-color: $black;
+    height: 30rem;
+    width: 20rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-2rem);
+    }
+    display: flex;
+    flex-direction: column;
+    &__photo {
+      background-color: red;
+      height: 70%;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__text {
+      height: 30%;
+      padding: 1rem;
+    }
+  }
+}
+
+.name {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.role {
+  font-size: 1.4rem;
+}
+
+/* CARDS */
+
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  height: 30vh;
+  background-color: $black;
+  width: 100%;
+  color: $white;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    &--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__center {
+    flex: 0 0 40%;
+    font-family: 'Product Sans', Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+  }
+  &__right {
+    align-self: flex-end;
+    flex: 0 0 25%;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    &--One {
+      width: 100%;
+    }
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  letter-spacing: 1.5px;
+  font-size: 4rem;
+}
+
+.logos {
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__facebook img {
+    width: 3rem;
+  }
+  &__instagram img {
+    width: 4.5rem;
+  }
+}
