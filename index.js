@@ -8,6 +8,6 @@ const server = http.createServer(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-server.listen(port, '127.0.0.1', () => {
+server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
