@@ -1,0 +1,26 @@
+{
+  "name": "OpenSource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agnibha-chatterjee/Open-Source-Community-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agnibha-chatterjee/Open-Source-Community-Website/issues"
+  },
+  "homepage": "https://github.com/agnibha-chatterjee/Open-Source-Community-Website#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "engines": {
+    "node": "10.11.0"
+  }
+}
