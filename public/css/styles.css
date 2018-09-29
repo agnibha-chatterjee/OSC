@@ -267,7 +267,7 @@ body {
       -webkit-transform: translateY(-2rem);
               transform: translateY(-2rem); }
     .cards__container--card__photo {
-      background-color: red;
+      //background-color: red;
       height: 70%; }
       .cards__container--card__photo img {
         width: 100%;
